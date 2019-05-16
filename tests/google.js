@@ -11,6 +11,7 @@ module.exports = {
     client
       .setValue('input[type=text]', ['nightwatch', client.Keys.ENTER])
       .pause(1000)
+      .saveScreenshot('./reports/search-result.png')
       .assert.containsText('#search', 'nightwatch')
       .end();
   }
